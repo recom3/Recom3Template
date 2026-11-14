@@ -2,7 +2,7 @@
 
 Start a Java app for the **Recon Snow2** HUD. The template opens a landscape, full-screen GPS dashboard. The remote switches between speed and horizontal accuracy and can pause GPS updates. The project is based on [Recom3Ghost](https://github.com/recom3/Recom3Ghost).
 
-[Inicio rápido en español](docs/inicio-rapido.md) · [SDK guide](docs/sdk.md) · [HUD and remote guide](docs/ui.md) · [Signing and Uplink](docs/publishing.md)
+[SDK guide](docs/sdk.md) · [HUD and remote guide](docs/ui.md) · [Signing and Uplink](docs/publishing.md)
 
 ## Build your first APK
 
