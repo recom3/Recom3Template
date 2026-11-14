@@ -1,0 +1,2 @@
+rootProject.name = 'Recom3Template'
+include ':app', ':reconUI'

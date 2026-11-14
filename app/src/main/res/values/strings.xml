@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Recom3 Template</string>
+    <string name="hud_title">RECOM3 TEMPLATE</string>
+    <string name="gps_unavailable">GPS UNAVAILABLE</string>
+    <string name="gps_denied">GPS PERMISSION DENIED</string>
+    <string name="gps_off">GPS OFF</string>
+    <string name="gps_searching">SEARCHING GPS</string>
+    <string name="gps_ready">GPS READY</string>
+    <string name="gps_paused">GPS PAUSED</string>
+    <string name="metric_speed">SPEED</string>
+    <string name="metric_accuracy">GPS ACCURACY</string>
+    <string name="unit_speed">km/h</string>
+    <string name="unit_accuracy">m</string>
+    <string name="no_value">—</string>
+    <string name="controls_pause">← →  Metric     ·     OK  Pause</string>
+    <string name="controls_resume">← →  Metric     ·     OK  Resume</string>
+    <string name="controls_metric">← →  Metric</string>
+</resources>
