@@ -4,6 +4,12 @@ Start a Java app for the **Recon Snow2** HUD. The template opens a landscape, fu
 
 [SDK guide](docs/sdk.md) · [HUD and remote guide](docs/ui.md) · [Signing and Uplink](docs/publishing.md)
 
+## HUD preview
+
+<img src="docs/recom3-template-hud.png" width="428" alt="Recom3Template HUD mockup showing GPS ready, a speed of 32 km/h, and remote controls">
+
+*Mockup of the 428 × 240 HUD with sample GPS data.*
+
 ## Build your first APK
 
 1. On GitHub, select **Use this template → Create a new repository**, then clone your copy.
