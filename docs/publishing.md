@@ -15,17 +15,10 @@ The script uses the `JAVA_HOME` and `ANDROID_HOME` setup from the README. It run
 
 On other platforms, run `sh ./gradlew :app:assembleRelease`. The unsigned APK is `app/build/outputs/apk/release/app-release-unsigned.apk`. Use `zipalign -c 4` to check alignment, then `apksigner sign --ks <keystore> --ks-key-alias <alias> --out app-release.apk <unsigned-apk>` and `apksigner verify --min-sdk-version 16 --print-certs app-release.apk`. Use the tools from Build Tools 27.0.3. [Android signing documentation](https://developer.android.com/tools/apksigner)
 
-## Package for Recom3 Uplink
+## Test the release APK
 
-If your Uplink workflow uses RIF, take the signed release APK and run your local copy of `PrepRecom3Rif.jar` from a writable folder dedicated to the conversion. The packer writes `output.rif` in the working directory. Rename it before packaging another APK.
-
-```powershell
-& "$env:JAVA_HOME\bin\java.exe" -jar 'C:\tools\PrepRecom3Rif.jar' 'C:\path\to\app-release.apk'
-Rename-Item -LiteralPath .\output.rif -NewName MyApp.rif
-```
-
-Install the resulting RIF with Recom3 Uplink. Before releasing, install the signed APK or RIF on the target HUD and test starting it, using the remote and upgrading an earlier build with the same certificate.
+Install the signed APK on a Snow2 with `adb install -r`. Check that it opens, the remote controls work, and an earlier build signed with the same key can be upgraded.
 
 ## Publish the template repository
 
-Push the source to GitHub. Under **Settings → General**, enable **Template repository** to show **Use this template** on the repo. The ignore file excludes local SDK settings, private keystores and build outputs. Add a signed APK or RIF as a GitHub Release asset if you want to share a binary. [GitHub template repository documentation](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository)
+Push the source to GitHub. Under **Settings → General**, enable **Template repository** to show **Use this template** on the repo. The ignore file excludes local SDK settings, private keystores and build outputs. Add a signed APK as a GitHub Release asset if you want to share a binary. [GitHub template repository documentation](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository)
